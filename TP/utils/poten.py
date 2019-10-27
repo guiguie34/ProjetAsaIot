@@ -20,4 +20,33 @@ full_angle = 300
 def pot():
 	return  grovepi.analogRead(potentiometer)
 
+def conversion():
+
+	piece=grovepi.analogRead(potentiometer)
+	rep=0
+	if piece<100:
+		rep=0.01
+		return rep
+	elif piece>99 and piece<200:
+		rep=0.02
+		return rep
+	elif piece>199 and piece<300:
+		rep=0.05
+		return rep
+	elif piece>299 and piece<400:
+		rep=0.1
+		return rep
+	elif piece>399 and piece<500:
+		rep=0.2
+		return rep
+	elif piece>499 and piece<600:
+		rep=0.5
+		return rep
+	elif piece>599 and piece<700:
+		rep=1.0
+		return rep
+	else:
+		rep=2.0
+		return rep
+
 

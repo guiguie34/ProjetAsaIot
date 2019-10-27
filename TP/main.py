@@ -3,7 +3,7 @@
 from utils.driverI2C import *
 from utils.ultra import *
 from utils.LED import *
-#from utils.poten import *
+from utils.poten import *
 import time
 import os
 
@@ -29,14 +29,17 @@ while True:
 		if dist_ultra()<50:
 			setText("Proche")
 			setRGB(200,0,0)
+			allume()
 		else:
 			setText("Loin")
 			setRGB(0,200,0)
+			eteindre()
 		time.sleep(1)	
 	except KeyboardInterrupt:
 		print("Leave")
 		os.system('i2cset -y 1 0x3e 0x80 0x01')
 		setRGB(0,0,0)
+		eteindre()
 		break 
 
 
