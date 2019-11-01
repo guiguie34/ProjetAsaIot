@@ -3,4 +3,4 @@
 #Ecran LCD I2C-1
 #Capteur Ultrason D4
 #LED D5
-#Capteur Poids ?
+#Capteur Poids A0

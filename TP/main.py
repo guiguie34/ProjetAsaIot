@@ -26,6 +26,7 @@ time.sleep(0.5)
 
 while True: 
 	try:
+		print(dist_ultra())
 		if dist_ultra()<50:
 			setText("Proche")
 			setRGB(200,0,0)
