@@ -20,7 +20,19 @@ full_angle = 300
 def pot():
 	return  grovepi.analogRead(potentiometer)
 
-def conversion():
+def choix():
+
+	choix=pot()
+	print(choix)
+
+	if choix<500:
+		rep=1
+	else:
+		rep=0
+
+	return rep
+
+def jetaimepasfonctiondemerde():
 
 	piece=grovepi.analogRead(potentiometer)
 	print (piece)
